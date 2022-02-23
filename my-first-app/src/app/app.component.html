@@ -6,7 +6,7 @@
 
 <!-- Task 1 Crate Simple Component using app.component.ts variables -->
 <!-- Write a function that returns btn click counter -->
-<div class="container-fluid row">
+<!-- <div class="container-fluid row">
     <div class="col-6 ">
         <h3>Task-1: Count Number of Button Clicks</h3>
         <button class="btn btn-primary col-2 " (click)="clickcount()">Click</button>
@@ -16,10 +16,10 @@
         <h3>Property Binding</h3>
         <img [src]="imgUrl" class="image1" alt="Not Found">
     </div>
-</div>
+</div> -->
 
 <!-- Task 2:  Fill details on button click-->
-<div class="row container">
+<!-- <div class="row container">
     <div class="col ">
         <h3>Task-2: Fill Details on Button Click</h3>
         <br>
@@ -27,4 +27,45 @@
         <br><br>
         <input type="text" value={{btnvalue}}>
     </div>
-</div>
+</div> -->
+
+<!-- 
+<form class="container-fluid ">
+    <div class="row g-3 m-3 justify-content-center">
+        <div class="col-3 form-floating">
+            <input type="text" class="form-control" name="first_name" [(ngModel)]="first_name" placeholder="First Name">
+            <label for="floatingPassword">First Name</label>
+        </div>
+        <div class="col-3 form-floating">
+            <input type="text" class="form-control" placeholder="Last Name">
+            <label for="floatingPassword">Last Name</label>
+        </div>
+    </div>
+    <div class="row m-3 justify-content-center ">
+        <div class="col-1">
+            <button class="btn btn-primary" type="button" (click)="savedata()">Submit</button>
+        </div>
+    </div>
+</form>
+
+<div>
+    <table class="table table-success" id="content">
+        <thead>
+            <tr>
+                <th scope="col-2">#</th>
+                <th scope="col-2">First Name</th>
+                <th scope="col-2">Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{counter}}</th>
+                <td>{{first_name}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>    
+</div>-->
+<app-header></app-header>
+<app-content></app-content>
+<app-footer></app-footer>

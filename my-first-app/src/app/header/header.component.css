@@ -1,0 +1,19 @@
+.navbar{
+    height: 70px;
+    width: 100%;
+    background-color: #D0BB94;
+    color: #361F00;
+}
+
+.logoimage{
+    margin-left: 30px;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.logotext{
+    margin-top: 15px;
+    font-size: 30px;
+    float: left;
+}
