@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -15,11 +15,27 @@ export class ParentComponent implements OnInit {
   itemsent="Thomas";
   arraynamessender=["Nikunj","Sarthak","Ashish","Sujit"];
 
-  counters=["0"];
-
   count=0;
-  incrementcounter(newItem:string){
-    this.counters.push(newItem);
-    this.count++
+  incrementcounter(){
+    this.count++;
   }
+
+  image1url="./../assets/images/image1.jpg";
+  image2url="./../assets/images/image2.jpg";
+  image3url="./../assets/images/image4.jpg";
+
+  @Output() newItemEvent = new EventEmitter();
+  addNewItem(){
+    this.newItemEvent.emit();
+  }
+  
+  detailsstatus = false;
+
+  show_details(){
+    if(this.detailsstatus == false){
+      this.detailsstatus = true;
+    }else{
+      this.detailsstatus = false;
+    }
+  } 
 }

@@ -1,4 +1,6 @@
-<div class="row">
+<!-- Day 6 ngModel -->
+<!-- 
+    <div class="row">
     <div class="col-6">
         <app-child [itemreceived]="itemsent" [arraynamesreceiver]="arraynamessender"></app-child>
     </div>
@@ -10,4 +12,37 @@
         </ul>
         <p>{{count}}</p>
     </div>
+</div> -->
+<div class="row">
+    <div class="col m-2">
+        <img class="card-img-top image-size" [src]="image1url" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-primary" (click)="addNewItem()">Add to Cart</button>
+            <button class="btn btn-primary m-3" (click)="show_details()">Explore</button>
+        </div>
+    </div>
+    <div class="col m-2">
+        <img class="card-img-top image-size" [src]="image2url" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">Thomas John</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-primary" (click)="addNewItem()">Add to Cart</button>
+            <button class="btn btn-primary m-3" (click)="show_details()">Explore</button>
+        </div>
+    </div>
+    <div class="col m-2">
+        <img class="card-img-top image-size" [src]="image3url" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">Doe John</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <button class="btn btn-primary" (click)="addNewItem()">Add to Cart</button>
+            <button class="btn btn-primary m-3" (click)="show_details()">Explore</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <app-products *ngIf="detailsstatus"></app-products>
 </div>

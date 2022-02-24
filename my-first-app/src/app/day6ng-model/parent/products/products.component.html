@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">
         <img src="./../assets/images/logo.png" class="card-img-top" alt="Not Found">  
@@ -6,7 +6,22 @@
     </div>
 </div>
 <input type="text" #newItem>
-<button  class="btn btn-primary" (click)="addNewItem(newItem.value)">Buy</button>
+<button  class="btn btn-primary" (click)="addNewItem(newItem.value)">Buy</button> -->
 <!-- <app-products [counterreceiver]="counter"></app-products> -->
 
 <!-- to raise an event @output functionality must have a type of evenet emitter -->
+
+<!-- <div class="card-body" *ngIf="image1status">
+  <h4 class="card-title">John Doe</h4>
+  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+  <a href="#" class="btn btn-primary">Buy</a>
+</div> -->
+
+<div class="container">
+  <img [src]="image1url" class="imagesize">
+  <h1 class="headind-blacktea">Doe John</h1>
+  <p class="shortdesc"></p>
+  <p class="rs"><b>120/-</b></p>
+  <p class="tax">*Terms and Conditions Apply</p>
+  <a href="#" class="btn btn-primary button" (click)="additem()">Add to Cart</a>
+</div>

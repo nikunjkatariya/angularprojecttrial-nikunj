@@ -17,4 +17,11 @@ export class ProductsComponent implements OnInit {
     this.newItemEvent.emit(value);
   }
 
+  image1url="./../assets/images/image1.jpg";
+  
+  @Output() product1Event = new EventEmitter();
+    additem(){
+      this.product1Event.emit();
+    }
+
 }

@@ -1,4 +1,4 @@
-<div class="container-fluid mt-3">
+<!-- <div class="container-fluid mt-3">
     <p>ngModel *ngIf</p>
     <div class="row">
         <div class="col-2">
@@ -53,5 +53,18 @@
 <div class="container-fluid btn-success">
     Transfer Data From Parent to Child
     <app-parent></app-parent>
-</div>
+</div>-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="https://www.tutorialrepublic.com/examples/images/logo.svg" height="28" alt="CoolBrand">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav ms-auto">
+            <span class="nav-item nav-link">Cart: [ {{count}} ]</span>
+        </div>
+    </div>
+</nav>
+<app-parent (newItemEvent)="incrementcounter()"></app-parent>
 

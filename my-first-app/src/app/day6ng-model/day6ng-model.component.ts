@@ -23,5 +23,10 @@ export class Day6ngModelComponent implements OnInit {
 
   numarrays= [20,10,53,40,31];
   namearrays = ["Nik","Sarthak","Naynesh","Dhruv","Madhusudan","Sujit","Ashish"];
+
+  count=0;
+  incrementcounter(){
+    this.count++;
+  }
 }
 
