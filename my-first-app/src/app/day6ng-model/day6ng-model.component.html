@@ -1,0 +1,57 @@
+<div class="container-fluid mt-3">
+    <p>ngModel *ngIf</p>
+    <div class="row">
+        <div class="col-2">
+            <input type="text" [(ngModel)]="fname" placeholder="First Name">
+        </div>
+        <div class="col-2">
+            <input type="text" [(ngModel)]="lname" placeholder="Last Name">
+        </div>
+        <div class="col-2">
+            <input type="date" [(ngModel)]="dob">
+        </div>
+    </div>
+    <div class="row m-3">
+        <h3>Hello! {{fname+" "+lname}}</h3>
+        <h4 *ngIf="hasvalue()">{{dob}}</h4>
+        ngIf with Expression
+        <h2 *ngIf="4%2==0">{{lname}}</h2>
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+    <b>*ngFor</b>
+    <div class="row">
+        <p>Print Numbers which has Moduler 0.</p>
+        <div class="col-1 btn-success m-1" *ngFor="let numarray of numarrays">
+            <div *ngIf="numarray%2==0">{{numarray}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 btn-primary m-1" *ngFor="let namearray of namearrays">{{namearray}}</div>
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+    <b>Print Names which has length is more than 5</b>
+    <div class="row">
+        <div class="col-1 btn-primary m-1" *ngFor="let namearray of namearrays">
+            <div *ngIf="namearray.length>5">{{namearray}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+    <b>Print Names which are at the odd locations</b>
+    <div class="row">
+        <div *ngFor="let namearray of namearrays;let i=index">
+            <div *ngIf="i%2!=0">{{namearray}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid btn-success">
+    Transfer Data From Parent to Child
+    <app-parent></app-parent>
+</div>
+

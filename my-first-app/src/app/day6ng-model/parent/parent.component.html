@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-6">
+        <app-child [itemreceived]="itemsent" [arraynamesreceiver]="arraynamessender"></app-child>
+    </div>
+    <div class="col-6 row">
+        Child to Parent Data Transfer: Counter Value
+        <app-products (newItemEvent)="incrementcounter($event)" ></app-products>
+        <ul>
+            <li *ngFor="let counter of counters">{{counter}}</li>
+        </ul>
+        <p>{{count}}</p>
+    </div>
+</div>

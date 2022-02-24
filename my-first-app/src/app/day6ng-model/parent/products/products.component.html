@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="./../assets/images/logo.png" class="card-img-top" alt="Not Found">  
+      </div>
+    </div>
+</div>
+<input type="text" #newItem>
+<button  class="btn btn-primary" (click)="addNewItem(newItem.value)">Buy</button>
+<!-- <app-products [counterreceiver]="counter"></app-products> -->
+
+<!-- to raise an event @output functionality must have a type of evenet emitter -->
