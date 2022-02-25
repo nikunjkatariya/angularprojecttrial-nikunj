@@ -10,6 +10,9 @@ import { Day6ngModelComponent } from './day6ng-model/day6ng-model.component';
 import { ParentComponent } from './day6ng-model/parent/parent.component';
 import { ChildComponent } from './day6ng-model/child/child.component';
 import { ProductsComponent } from './day6ng-model/parent/products/products.component';
+import { Day7ngClassComponent } from './day7ng-class/day7ng-class.component';
+import { ProductComponent } from './day7ng-class/product/product.component';
+import { ProductListComponent } from './day7ng-class/product/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { ProductsComponent } from './day6ng-model/parent/products/products.compo
     ParentComponent,
     ChildComponent,
     ProductsComponent,
+    Day7ngClassComponent,
+    ProductComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

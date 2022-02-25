@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <h4>Cart:{{counter}}</h4>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">img</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">price</th>
+            <th scope="col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of itemsInCart">
+            <th scope="row">{{data.id}}</th>
+            <td><img src={{data.imgurl}} class="imagesize" alt="Not Found"></td>
+            <td>{{data.name}}</td>
+            <td>{{data.quantity}}</td>
+            <td>{{data.price}}</td>
+            <td>{{data.quantity * data.price}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <th>Total Cost: {{totalcost}}</th>
+        </tfoot>
+      </table>
+</div>
+<div class="container-fluid">
+    <app-product-list (newItemEvent)="gatherdetail($event)"></app-product-list>
+</div>
+

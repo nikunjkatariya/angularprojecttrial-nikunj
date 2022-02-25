@@ -1,0 +1,11 @@
+<div class="row">
+    <div class=" card m-2 " style="width: 19rem;" *ngFor="let data of jsondata; let i = index">
+        <img src={{data.imgurl}} class="card-img-top imagesize" alt="Not Found">
+        <div class="card-body">
+          <h5 class="card-title">{{data.id + " "+data.name}}</h5>
+          <p class="card-text">{{data.price+ "$   QTY:" +data.quantity}}</p>
+          <button class="btn btn-primary" (click)="additem(data)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+  
