@@ -239,4 +239,13 @@ export class GetinformationService {
       }
     }
   ];
+
+  chagedata()
+  {
+    for(let i=0;i<this.jsondata.length;i++)
+    {
+      this.jsondata[i].id+=5;
+    }
+    // console.log(this.jsondata.length);
+  }
 }

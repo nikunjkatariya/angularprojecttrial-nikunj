@@ -9,7 +9,7 @@ import { GetinformationService } from './getinformation.service';
 })
 export class DayViiiServicesComponent implements OnInit {
 
-  constructor(private dt:DatetimeService, private getdata:GetinformationService) {}
+  constructor(private dt:DatetimeService, public getdata:GetinformationService) {}
 
   ngOnInit(): void {
   }
@@ -26,12 +26,4 @@ export class DayViiiServicesComponent implements OnInit {
   // Task 1 JSON Data through Service
   jsondata=this.getdata.jsondata;
   
-  chagedata()
-  {
-    for(let i=0;i<this.jsondata.length;i++)
-    {
-      this.getdata.jsondata[i].id+=5;
-    }
-    // console.log(this.jsondata.length);
-  }
 }
