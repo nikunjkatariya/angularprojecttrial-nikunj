@@ -20,8 +20,10 @@ export class AppComponent {
   imgUrl=".././assets/images/testimage.jpg";
   counter=1;
   first_name: string ='';
+  last_name: string ='';
   savedata(){
     this.counter++;
-    console.log('Name',this.first_name);
+    console.log('First Name:',this.first_name);
+    console.log('Last Name:',this.last_name);
   }
 }

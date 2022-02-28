@@ -13,6 +13,10 @@ import { ProductsComponent } from './day6ng-model/parent/products/products.compo
 import { Day7ngClassComponent } from './day7ng-class/day7ng-class.component';
 import { ProductComponent } from './day7ng-class/product/product.component';
 import { ProductListComponent } from './day7ng-class/product/product-list/product-list.component';
+import { DayViiiServicesComponent } from './day-viii-services/day-viii-services.component';
+import { DatetimeService } from './day-viii-services/datetime.service';
+import { GetinformationService } from './day-viii-services/getinformation.service';
+import { ServicedatachangeComponent } from './day-viii-services/servicedatachange/servicedatachange.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,14 @@ import { ProductListComponent } from './day7ng-class/product/product-list/produc
     Day7ngClassComponent,
     ProductComponent,
     ProductListComponent,
+    DayViiiServicesComponent,
+    ServicedatachangeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatetimeService,GetinformationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
