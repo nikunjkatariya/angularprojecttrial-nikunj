@@ -248,4 +248,31 @@ export class GetinformationService {
     }
     // console.log(this.jsondata.length);
   }
+
+  name="";
+  getname(value:string){
+    this.name=value;
+  }
+
+  setname()
+  {
+    return this.name;
+  }
+
+  //Task 4 Template Driven
+  
+  user:any=[
+    {
+      "name":'Thomas',
+      "date":'2022-12-31',
+      "gender":'Male',
+      "class":'Class 1',
+      "contact":'7788894455'
+    },
+  ];
+
+  onsubmit(user:any){
+    this.user.push(user);
+    console.log(this.user);
+  }
 }

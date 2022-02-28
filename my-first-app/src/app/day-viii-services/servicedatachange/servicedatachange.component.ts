@@ -8,10 +8,15 @@ import { GetinformationService } from './../getinformation.service';
 })
 export class ServicedatachangeComponent implements OnInit {
 
-  constructor(private getdata:GetinformationService) { }
+  constructor(public getdata:GetinformationService) { }
 
   ngOnInit(): void {
   }
-
+  // Task 2
   jsondata=this.getdata.jsondata;
+
+  //Task 3
+  name=this.getdata.setname();
+
+  regformdata=this.getdata.user;
 }
