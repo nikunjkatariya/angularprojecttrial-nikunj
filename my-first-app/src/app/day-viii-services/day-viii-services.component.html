@@ -49,7 +49,7 @@
 
 
 <!--Task 4 Forms Template Driven -->
-<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+<!-- <section class="h-100 h-custom" style="background-color: #8fc4b7;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-8 col-xl-6">
@@ -108,10 +108,10 @@
   </div>
 </section>
 
-<app-servicedatachange></app-servicedatachange>
+<app-servicedatachange></app-servicedatachange> -->
 
 <!-- Task 5 Table of entered Value -->
-<div class="container row m-0">
+<!-- <div class="container row m-0">
   <div class="col-3">
     <input type="number" class="form-control" #reqnum><br>
     <button class="btn btn-warning" (click)="printtable(reqnum.value)">Calculate</button>
@@ -124,5 +124,78 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div> -->
+
+<div class="card shadow mb-5 bg-white rounded">
+  <!--Card-Body-->
+  <div class="card-body">
+    <!--Card-Title-->
+    <p class="card-title text-center shadow mb-5 rounded"><strong>Booking Form</strong></p>
+    <p class="searchText"><strong>Search For Cheap Flights</strong></p>
+    <!--Second Row-->
+    <form #bookingForm="ngForm" (ngSubmit)="calculate(bookingForm.value)">
+    <div class="row">
+      <div class="col-sm-6"> 
+        <select class="form-control mb-4" id="selectfrom" name="fromname" [ngModel]="bookingFormdata.fromname" required>
+          <option value="" disabled="" selected="">From City/Airport</option>
+          <option value="New Delhi">New Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bangalore">Bangalore</option>
+        </select> 
+      </div>
+      <div class="col-sm-6"> <select class="form-control mb-4" id="selectto" name="toname" [ngModel]="bookingFormdata.toname" required>
+          <option value="" disabled="" selected="">To City/Airport</option>
+          <option value="New Delhi">New Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bangalore">Bangalore</option>
+        </select>
+      </div>
+    </div>
+    <!--Third Row-->
+    <div class="row">
+      <div class="col-sm-6"> <input placeholder="Departing" type="date" id="date-picker-example" class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" name="fromdate" [ngModel]="bookingFormdata.fromdate" required> </div>
+      <div class="col-sm-6"> <input placeholder="Arriving" type="date" id="date-picker-example" class="form-control datepicker" style="font-family:Arial, FontAwesome" name="todate" [ngModel]="bookingFormdata.todate" required> </div>
+    </div>
+    <!--Fourth Row-->
+    <!-- <div class="row mt-4">
+      <div class="col-sm-6"> <select class="form-control mb-4" id="select">
+          <option value="" disabled="" selected="">Anytime</option>
+          <option value="1">6:00 AM</option >
+          <option value="2">3:00 PM</option>
+          <option value="3">6:00 PM</option>
+        </select> </div>
+      <div class="col-sm-6"> <select class="form-control mb-4" id="select">
+          <option value="" disabled="" selected="">Anytime</option>
+          <option value="1">6:00 AM</option>
+          <option value="2">3:00 PM</option>
+          <option value="3">6:00 PM</option>
+        </select> </div>
+    </div> -->
+    <!--Fifth Row-->
+    <!-- <div class="row">
+      <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+          <option value="" disabled="" selected="">Kids(0-14)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select> </div>
+      <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+          <option value="" disabled="" selected="">Adults(15-64)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select> </div>
+      <div class="col-sm-4"> <select class="browser-default custom-select mb-4" id="select">
+          <option value="" disabled="" selected="">Seniors(65+)</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select> </div>
+    </div>--> 
+    <button class="btn btn-primary float-right mt-5" type="submit" [disabled]="!bookingForm.form.valid">Calculate</button>
+    <br>
+    <small>*Cost is 101$ per Day</small>
+  </form>
   </div>
 </div>

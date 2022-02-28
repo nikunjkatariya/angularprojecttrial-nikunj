@@ -66,4 +66,21 @@ export class DayViiiServicesComponent implements OnInit {
       // console.log(this.tbl[v]);
     }
   }
+
+  //Task 6
+  bookingFormdata:any={
+    "fromname":"",
+    "toname":"",
+    "fromdate":"",
+    "todate":""
+  };
+
+  calculate(data:any){
+    alert(data.fromname);
+    let date1: Date = new Date(data.fromdate);
+    let date2: Date = new Date(data.todate);
+    let timeInMilisec: number = date1.getTime() - date2.getTime();
+    let daysBetweenDates: number = Math.ceil(timeInMilisec / (1000 * 60 * 60 * 24));
+    console.log("Total Cost for traveling from "+data.fromname+" to "+data.toname+" is : "+Math.abs(daysBetweenDates)*101+" $");
+  }
 }
