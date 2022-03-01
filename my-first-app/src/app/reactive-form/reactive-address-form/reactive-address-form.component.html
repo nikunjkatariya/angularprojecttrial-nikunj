@@ -1,0 +1,87 @@
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div>
+        <label>
+            Name:
+            <input formControlName="name" class="form-control" placeholder="Provide Name">
+        </label>
+    </div>
+    <div>
+        <label>
+            Email:
+            <input formControlName="email" class="form-control" placeholder="Provide Email">
+        </label>
+    </div>
+    <div>
+        <label>
+            City:
+            <input formControlName="city" class="form-control" placeholder="Provide Location">
+        </label>
+    </div>
+    <div>
+        <label>
+            Age:
+            <input type="number" formControlName="age" class="form-control" placeholder="Provide Age">
+        </label>
+    </div>
+    <div>
+        <label>
+            Contact No:
+            <input formControlName="contact" class="form-control" placeholder="Provide Contact Number">
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="!myForm.valid">Submit</button>
+</form> -->
+
+<div class="card shadow mb-5 bg-white rounded">
+    <div class="card-body">
+        <p class="card-title text-center shadow mb-5 rounded"><strong>Booking Form</strong></p>
+        <p class="searchText"><strong>Search For Cheap Flights</strong></p>
+        <form [formGroup]="bookingForm" (ngSubmit)="calculate(bookingForm)">
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="name" placeholder="Provide Name" class="form-control mb-4 font"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="email" placeholder="Provide Email" class="form-control font"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="city" placeholder="Provide City" class="form-control mb-4 font"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="contact" placeholder="Provide Contact" class="form-control font"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <select class="form-control mb-4" formControlName="fromname">
+                        <option value="" disabled="" selected="">From City/Airport</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Goa">Goa</option>
+                    </select>
+                </div>
+                <div class="col-sm-6"> 
+                    <select class="form-control mb-4" formControlName="toname">
+                        <option value="" disabled="" selected="">To City/Airport</option>
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input placeholder="Departing" type="date" class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" 
+                    formControlName="fromdate"> </div>
+                <div class="col-sm-6">
+                    <input placeholder="Arriving" type="date" class="form-control datepicker" style="font-family:Arial, FontAwesome" 
+                    formControlName="todate"> </div>
+            </div>
+            <button class="btn btn-primary float-right mt-5" type="submit" [disabled]="!bookingForm.valid">Calculate</button>
+            <br>
+            <small>*Cost is 101$ per Day</small>
+        </form>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +18,8 @@ import { DayViiiServicesComponent } from './day-viii-services/day-viii-services.
 import { DatetimeService } from './day-viii-services/datetime.service';
 import { GetinformationService } from './day-viii-services/getinformation.service';
 import { ServicedatachangeComponent } from './day-viii-services/servicedatachange/servicedatachange.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveAddressFormComponent } from './reactive-form/reactive-address-form/reactive-address-form.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +36,13 @@ import { ServicedatachangeComponent } from './day-viii-services/servicedatachang
     ProductListComponent,
     DayViiiServicesComponent,
     ServicedatachangeComponent,
+    ReactiveFormComponent,
+    ReactiveAddressFormComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DatetimeService,GetinformationService],
   bootstrap: [AppComponent]
