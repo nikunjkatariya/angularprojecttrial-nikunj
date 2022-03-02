@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +21,8 @@ import { GetinformationService } from './day-viii-services/getinformation.servic
 import { ServicedatachangeComponent } from './day-viii-services/servicedatachange/servicedatachange.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveAddressFormComponent } from './reactive-form/reactive-address-form/reactive-address-form.component';
+import { HttpDataRequestComponent } from './http-data-request/http-data-request.component';
+import { HttpDataRequestService } from './http-data-request.service';
 
 @NgModule({
   declarations: [
@@ -38,13 +41,15 @@ import { ReactiveAddressFormComponent } from './reactive-form/reactive-address-f
     ServicedatachangeComponent,
     ReactiveFormComponent,
     ReactiveAddressFormComponent,
+    HttpDataRequestComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DatetimeService,GetinformationService],
+  providers: [DatetimeService,GetinformationService,HttpDataRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

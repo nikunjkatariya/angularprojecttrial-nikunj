@@ -1,0 +1,121 @@
+<!-- Get JSON Method -->
+<div class="card shadow mb-5 bg-white rounded">
+    <div class="card-body">
+        <p class="searchText"><strong>JSON GET</strong></p>
+        <div class="row">
+            <div class="col-12 mb-4 ml-4">
+                <input type="number" placeholder="Provide Id" class="w-25 form-control" [(ngModel)]="id" required>
+                <button class="btn btn-primary" (click)="fetchdata()">GET</button>
+            </div>
+        </div>
+        <div class="row">   
+            <div class="col-sm-6">
+                <input placeholder="Name" class="form-control mb-4" [(ngModel)]="fname" disabled>
+            </div>
+            <div class="col-sm-6">
+                <input placeholder="Email" class="form-control" [(ngModel)]="lname" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input placeholder="Email" class="form-control mb-4" [(ngModel)]="email" disabled>
+            </div>
+            <div class="col-sm-6">
+                <input placeholder="Contact" class="form-control" [(ngModel)]="phone" disabled>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow mb-5 bg-white rounded">
+    <div class="card-body">
+        <p class="searchText"><strong>JSON POST</strong></p>
+        <form [formGroup]="PostMethodForm" (ngSubmit)="PostData(PostMethodForm)">
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="first_name" placeholder="Provide First Name" class="form-control mb-4"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="last_name" placeholder="Provide Last Name" class="form-control"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="email" placeholder="Provide Email" class="form-control mb-4"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="phone" placeholder="Provide Contact" class="form-control"> 
+                </div>
+            </div>
+            <button class="btn btn-primary float-right mt-2" type="submit" [disabled]="!PostMethodForm.valid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- <div class="card shadow mb-5 bg-white rounded">
+    <div class="card-body">
+        <p class="searchText"><strong>JSON POST</strong></p>
+        <form [formGroup]="PostMethodForm" (ngSubmit)="PostData(PostMethodForm)">
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="first_name" placeholder="Provide First Name" class="form-control mb-4"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="last_name" placeholder="Provide Last Name" class="form-control"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <input formControlName="email" placeholder="Provide Email" class="form-control mb-4"> 
+                </div>
+                <div class="col-sm-6">
+                    <input formControlName="phone" placeholder="Provide Contact" class="form-control"> 
+                </div>
+            </div>
+            <button class="btn btn-primary float-right mt-2" type="submit" [disabled]="!PostMethodForm.valid">Submit</button>
+        </form>
+    </div>
+</div> -->
+
+<h4>Get All Data</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dt of details">
+            <td>{{dt.id}}</td>
+            <td>{{dt.first_name}}</td>
+            <td>{{dt.last_name}}</td>
+            <td>{{dt.email}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of htdata">
+            <td>{{d.id}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.username}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.phone}}</td>
+            <td>{{d.website}}</td>
+        </tr>
+    </tbody>
+</table>
